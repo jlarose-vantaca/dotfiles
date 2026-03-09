@@ -180,3 +180,8 @@ function __setprompt
 	PS4='\[${DARKGRAY}\]+\[${NOCOLOR}\] '
 }
 PROMPT_COMMAND='__setprompt'
+
+# Load machine-local aliases last so they override repo defaults
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi

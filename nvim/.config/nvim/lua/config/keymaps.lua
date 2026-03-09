@@ -14,7 +14,7 @@ local global_mappings = {
   { '<C-u>', '<C-u>zz', desc = 'Half page up and center' },
   { 'n', 'nzzzv', desc = 'Next result and center' },
   { 'N', 'Nzzzv', desc = 'Previous result and center' },
-  { '<leader>e', '<cmd>Ex<CR>', desc = 'Go back to file tree' },
+  { '<leader>q', '<cmd>q<CR>', desc = 'Go back to file tree' },
   { 'j', 'jzz', desc = 'Jump to line and center' },
 }
 
