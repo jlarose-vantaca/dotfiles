@@ -7,6 +7,7 @@ local global_mappings = {
   { '<C-l>', '<C-w><C-l>', desc = 'Move focus right' },
   { '<C-j>', '<C-w><C-j>', desc = 'Move focus down' },
   { '<C-k>', '<C-w><C-k>', desc = 'Move focus up' },
+  { '<Tab>', '<C-w>w', desc = 'Move to next window focus' },
   { '<leader>q', vim.diagnostic.setloclist, desc = 'Diagnostics loclist' },
   { 'J', 'mzJ`z', desc = 'Join lines and keep cursor' },
   { '<C-d>', '<C-d>zz', desc = 'Half page down and center' },
@@ -22,7 +23,7 @@ wk.add(global_mappings)
 local lsp_mappings = {
   { 'gd', vim.lsp.buf.definition, desc = 'Go to definition' },
   { 'K', vim.lsp.buf.hover, desc = 'Show hover information' },
-  { '<leader>ln', vim.lsp.buf.rename, desc = 'Rename' },
+  { '<leader>rn', vim.lsp.buf.rename, desc = 'Rename' },
   { '<leader>lr', vim.lsp.buf.references, desc = 'References' },
 }
 
