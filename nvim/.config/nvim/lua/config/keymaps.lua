@@ -8,23 +8,25 @@ local global_mappings = {
   { '<C-j>', '<C-w><C-j>', desc = 'Move focus down' },
   { '<C-k>', '<C-w><C-k>', desc = 'Move focus up' },
   { '<Tab>', '<C-w>w', desc = 'Move to next window focus' },
-  { '<leader>q', vim.diagnostic.setloclist, desc = 'Diagnostics loclist' },
   { 'J', 'mzJ`z', desc = 'Join lines and keep cursor' },
   { '<C-d>', '<C-d>zz', desc = 'Half page down and center' },
   { '<C-u>', '<C-u>zz', desc = 'Half page up and center' },
   { 'n', 'nzzzv', desc = 'Next result and center' },
   { 'N', 'Nzzzv', desc = 'Previous result and center' },
   { '<leader>q', '<cmd>q<CR>', desc = 'Go back to file tree' },
-  { 'j', 'jzz', desc = 'Jump to line and center' },
+  { 'j', 'jzz', desc = 'Jump down to line and center' },
+  { 'k', 'kzz', desc = 'Jump up to line and center' },
 }
 
 wk.add(global_mappings)
 
 local lsp_mappings = {
   { 'gd', vim.lsp.buf.definition, desc = 'Go to definition' },
+  { 'gr', vim.lsp.buf.references, desc = 'Go to Reference' },
+  { 'gi', vim.lsp.buf.implementation, desc = 'Go to Implementation' },
+  { 'gb', '<C-o>', desc = 'Go back through page history' },
   { 'K', vim.lsp.buf.hover, desc = 'Show hover information' },
   { '<leader>rn', vim.lsp.buf.rename, desc = 'Rename' },
-  { '<leader>lr', vim.lsp.buf.references, desc = 'References' },
 }
 
 wk.add(lsp_mappings)
