@@ -114,6 +114,8 @@ vim.diagnostic.config {
   jump = { float = true },
 }
 
+vim.diagnostic.enable(false)
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -497,6 +499,7 @@ require('lazy').setup({
       ---@type table<string, vim.lsp.Config>
       local servers = {
         csharp_ls = {},
+        --omnisharp = {},
         ts_ls = {},
         cssls = {},
         html = {},
@@ -559,6 +562,7 @@ require('lazy').setup({
         'typescript-language-server',
         'css-lsp',
         'html-lsp',
+        --'omnisharp',
         -- You can add other tools here that you want Mason to install
       }
 

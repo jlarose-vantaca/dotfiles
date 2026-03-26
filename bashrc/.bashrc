@@ -129,8 +129,8 @@ function __setprompt
 	fi
 
 	# Date
-	PS1+="\[${DARKGRAY}\](\[${BLUE}\]\$(date +%a) $(date +%b-'%-m')" # Date
-	PS1+=" $(date +'%-I':%M:%S%P)\[${DARKGRAY}\])-" # Time
+	PS1+="\[${DARKGRAY}\](\[${LIGHTBLUE}\]\$(date +%a) $(date +%b-'%-m')" # Date
+	PS1+="${LIGHTBLUE} $(date +'%-I':%M:%S%P)\[${DARKGRAY}\])-" # Time
 
 	# CPU
 	PS1+="(\[${MAGENTA}\]CPU $(cpu)%\[${DARKGRAY}\])-"

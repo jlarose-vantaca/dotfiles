@@ -1,6 +1,8 @@
 local opt = vim.opt
 local o = vim.o
 
+o.fileformats = 'unix,dos,mac'
+
 -- Line numbers
 o.number = true
 o.relativenumber = true
